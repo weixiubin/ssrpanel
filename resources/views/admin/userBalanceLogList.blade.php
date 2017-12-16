@@ -7,18 +7,7 @@
 @section('title', '控制面板')
 @section('content')
     <!-- BEGIN CONTENT BODY -->
-    <div class="page-content">
-        <!-- BEGIN PAGE BREADCRUMB -->
-        <ul class="page-breadcrumb breadcrumb">
-            <li>
-                <a href="{{url('admin')}}">账号管理</a>
-                <i class="fa fa-circle"></i>
-            </li>
-            <li>
-                <a href="{{url('admin/userBalanceLogList')}}">余额变动日志</a>
-            </li>
-        </ul>
-        <!-- END PAGE BREADCRUMB -->
+    <div class="page-content" style="padding-top:0;">
         <!-- BEGIN PAGE BASE CONTENT -->
         <div class="row">
             <div class="col-md-12">
@@ -26,8 +15,8 @@
                 <div class="portlet light bordered">
                     <div class="portlet-title">
                         <div class="caption font-dark">
-                            <i class="icon-speedometer font-dark"></i>
-                            <span class="caption-subject bold uppercase"> 余额变动日志</span>
+                            <i class="icon-credit-card font-dark"></i>
+                            <span class="caption-subject bold uppercase"> 余额日志</span>
                         </div>
                     </div>
                     <div class="portlet-body">
@@ -44,8 +33,8 @@
                             <table class="table table-striped table-bordered table-hover table-checkable order-column">
                                 <thead>
                                 <tr>
-                                    <th> ID </th>
-                                    <th> 用户 </th>
+                                    <th> # </th>
+                                    <th> 用户名 </th>
                                     <th> 订单ID </th>
                                     <th> 操作前余额 </th>
                                     <th> 发生金额 </th>

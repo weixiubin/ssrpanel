@@ -15,6 +15,7 @@ Route::group(['middleware' => ['user', 'admin']], function() {
     Route::get('admin', 'AdminController@index'); // 后台首页
     Route::get('admin/userList', 'AdminController@userList'); // 账号列表
     Route::any('admin/addUser', 'AdminController@addUser'); // 添加账号
+    Route::post('admin/batchAddUsers', 'AdminController@batchAddUsers'); // 批量生成账号
     Route::any('admin/editUser', 'AdminController@editUser'); // 编辑账号
     Route::post('admin/delUser', 'AdminController@delUser'); // 删除账号
     Route::get('admin/nodeList', 'AdminController@nodeList'); // 节点列表
@@ -65,6 +66,7 @@ Route::group(['middleware' => ['user', 'admin']], function() {
     Route::post('admin/setQrcode', 'AdminController@setQrcode'); // 设置充值二维码
     Route::post('admin/resetUserTraffic', 'AdminController@resetUserTraffic'); // 重置用户流量
     Route::post('admin/handleUserBalance', 'AdminController@handleUserBalance'); // 余额充值
+    Route::get('admin/userOrderList', 'AdminController@userOrderList'); // 用户消费记录
     Route::get('admin/userBalanceLogList', 'AdminController@userBalanceLogList'); // 余额变动日志
     Route::get('admin/makePasswd', 'AdminController@makePasswd'); // 获取随机密码
     Route::get('admin/download', 'AdminController@download'); // 下载转换过的JSON配置
@@ -102,3 +104,7 @@ Route::group(['middleware' => ['user']], function() {
     Route::post('user/extractMoney', 'UserController@extractMoney'); // 申请提现
     Route::post("user/switchToAdmin","UserController@switchToAdmin"); // 转换成管理员的身份
 });
+
+//Route::group(['middleware' => ['user']], function() {
+    Route::any('payment/create', 'PaymentController@create');
+//});

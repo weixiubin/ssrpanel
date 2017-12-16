@@ -1,11 +1,14 @@
 /config/database.php
 /public/upload
-/storage
+/storage/framework
+/storage/logs
+/storage/app/public
 /vendor
 /.idea
 /.vagrant
-/.env
+/.env.example
 Homestead.json
 Homestead.yaml
 npm-debug.log
 .DS_Store
+.phpstorm.meta.php
